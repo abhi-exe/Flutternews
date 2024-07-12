@@ -1,0 +1,14 @@
+ListView. builder(
+itemCount: items.length,
+itemBuilder: (context, index) ‹
+final item = items [index];
+
+return ListTile(
+title: Text('Item $item'),
+subtitle: const Text ('my subtitle'),
+onTap: () => openPage (context),
+trailing: const Icon (Icons. chevron_right_outlined)
+
+openPage(){{
+    Navigator.push(context, DetailsPage());
+}}
