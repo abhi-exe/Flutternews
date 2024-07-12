@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/apicall.dart';
-import 'package:flutter_application_1/article.dart';
+import 'package:flutter_application_1/article_details_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -110,6 +110,6 @@ class _HomeState extends State<Home> {
   }
 
   detpagenav(context, Article article){
-    Navigator.push(context,MaterialPageRoute(builder: (context)=> Details(article: article)));
+    Navigator.push(context,MaterialPageRoute(builder: (context)=> ArticleDetailsScreen(article: article)));
   }
 }

@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home.dart';
 import 'package:flutter_application_1/apicall.dart';
-import 'package:flutter_application_1/article.dart';
+import 'package:flutter_application_1/article_details_screen.dart';
 
 void main() {
   runApp( const MaterialApp(
@@ -12,34 +12,34 @@ void main() {
 }
 
 
-class Sandbox extends StatelessWidget{
-  const Sandbox({super.key});
+// class Sandbox extends StatelessWidget{
+//   const Sandbox({super.key});
 
-  @override
-  Widget build(BuildContext context){
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('My App'),
-        backgroundColor: Colors.brown,
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        //mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-              Container( width: 100,
-                color: Colors.red,
-                child: const Text ('one'),
-              ), // Container
-              Container ( width: 200,
-                color: Colors. green,
-                child: const Text ('two'),), // Container
-              Container ( width: 300,
-                color: Colors.blue,
-                child: const Text('three'),) ]// Container
-          ), //
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context){
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('My App'),
+//         backgroundColor: Colors.brown,
+//       ),
+//       body: Column(
+//         crossAxisAlignment: CrossAxisAlignment.stretch,
+//         //mainAxisAlignment: MainAxisAlignment.spaceAround,
+//         children: [
+//               Container( width: 100,
+//                 color: Colors.red,
+//                 child: const Text ('one'),
+//               ), // Container
+//               Container ( width: 200,
+//                 color: Colors. green,
+//                 child: const Text ('two'),), // Container
+//               Container ( width: 300,
+//                 color: Colors.blue,
+//                 child: const Text('three'),) ]// Container
+//           ), //
+//     );
+//   }
+// }
 
 
 

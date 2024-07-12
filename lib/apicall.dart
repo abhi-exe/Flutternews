@@ -45,7 +45,7 @@ class Apiservice{
   static Future<List<Article>> apisrv() async{
     http.Response response;
     Uri url=Uri.parse('https://mocki.io/v1/a3b52530-9ce3-4d02-b057-e59ef3aab339');
-    await  Future.delayed(const Duration(seconds: 5));
+    await  Future.delayed(const Duration(seconds: 2));
     response=await http.get(url);
     if(response.statusCode==200){
         final data = jsonDecode(response.body);
