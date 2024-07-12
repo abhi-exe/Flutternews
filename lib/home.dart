@@ -89,7 +89,11 @@ class _HomeState extends State<Home> {
             } else if (snapshot.hasError) {
               return Text('${snapshot.error}');
             }
-            return const LinearProgressIndicator();
+            return const Column(mainAxisAlignment: MainAxisAlignment.center,children: [Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Text('We are Loading News...',style: TextStyle(fontSize: 15, fontWeight: FontWeight.normal),),
+            ),
+            LinearProgressIndicator(color: Colors.red,)],);
           },
         ),
       ),)
