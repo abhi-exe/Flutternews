@@ -30,41 +30,53 @@ class ArticleDetailsScreen extends StatelessWidget{
         backgroundColor: const Color.fromARGB(197, 233, 10, 10),
         centerTitle: true,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        //mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-              Image.network(article.imageurl),
-              Container (
-                padding: const EdgeInsets.all(8),
-                child: Text(article.title, style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)), // Container
-              Container (
-                padding: const EdgeInsets.fromLTRB(10,2, 10,2),
-                alignment: Alignment.bottomLeft,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(article.sourcename),
-                    Text(article.publishedAt),
-                  ],
-                ),),
-              Container(
-                padding: const EdgeInsets.all(8),
-                child: Text(article.content, style:const TextStyle(
-                  fontSize: 17,
-                  fontFamily: 'Georgia',
-                ),),
-              ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(120, 40, 120, 0),
-                decoration: BoxDecoration(shape: BoxShape.rectangle,borderRadius:BorderRadius.circular(5)),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          //mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+                Image.network(article.imageurl),
+                Container (
+                  padding: const EdgeInsets.all(8),
+                  child: Text(article.title, style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)), // Container
+                Container (
+                  padding: const EdgeInsets.fromLTRB(10,2, 10,2),
+                  alignment: Alignment.bottomLeft,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(article.sourcename),
+                      Text(article.publishedAt),
+                    ],
+                  ),),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: Text(article.content, style:const TextStyle(
+                    fontSize: 17,
+                    fontFamily: 'Georgia',
+                  ),),
+                ),
+                // Container(
+                //   padding: const EdgeInsets.fromLTRB(120, 40, 120, 0),
+                //   decoration: BoxDecoration(shape: BoxShape.rectangle,borderRadius:BorderRadius.circular(5)),
+                //   child: ElevatedButton(onPressed: () {
+                //     _launchURL(article.url);
+                //   },
+                //   style: ElevatedButton.styleFrom(foregroundColor: Colors.white, backgroundColor: Colors.red),
+                //   child: const Text('Open in Browser'),),
+                // ) ]// Container
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(onPressed: () {
-                  _launchURL(article.url);
-                },
-                style: ElevatedButton.styleFrom(foregroundColor: Colors.white, backgroundColor: Colors.red),
-                child: const Text('Open in Browser'),),
-              ) ]// Container
-          ), //
+                        _launchURL(article.url);
+                      },
+                      style: ElevatedButton.styleFrom(foregroundColor: Colors.white, backgroundColor: Colors.red),
+                      child: const Text('Open in Browser'),),
+              ),
+            )
+            ]),
+      ), //
     );
   }
 }
