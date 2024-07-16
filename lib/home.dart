@@ -98,15 +98,6 @@ class _HomeState extends State<Home> {
         ),
       ),)
     );
-
-
-
-
-    // return Container(
-    //   color: Colors.grey,
-    //   padding: const EdgeInsets.all(18.0),
-    //   child: const Text('This is News', style: TextStyle(fontFamily: 'Georgia', fontSize: 45.0),),
-    // );
   }
 
   detpagenav(context, Article article){
