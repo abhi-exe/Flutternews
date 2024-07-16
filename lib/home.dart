@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
         ),
         backgroundColor: const Color.fromARGB(197, 233, 10, 10),
         centerTitle: false,
-        actions: [],
+        actions: const [],
       ),
       body: RefreshIndicator(onRefresh:() async{
         var articles= await Apiservice.apisrv();
