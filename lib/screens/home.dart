@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/services/apicall.dart';
 import 'package:flutter_application_1/screens/article_details_screen.dart';
 import 'package:flutter_application_1/models/article.dart';
 
@@ -16,7 +15,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    futurearticles = Apiservice.apisrv();
+    //futurearticles = Apiservice.apisrv();
   }
 
   // loadnews() async{
@@ -50,9 +49,9 @@ class _HomeState extends State<Home> {
         actions: const [],
       ),
       body: RefreshIndicator(onRefresh:() async{
-        var articles= await Apiservice.apisrv();
+        //var articles= await Apiservice.apisrv();
         setState(() {
-          futurearticles=Future.value(articles);
+          //futurearticles=Future.value(articles);
         });
       } ,child: Center(
         child: FutureBuilder<List<Article>>(

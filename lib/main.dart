@@ -1,14 +1,16 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/home.dart';
-import 'package:flutter_application_1/apicall.dart';
-import 'package:flutter_application_1/article_details_screen.dart';
+import 'package:flutter_application_1/screens/home.dart';
+import 'package:flutter_application_1/screens/homepage.dart';
+import 'package:flutter_application_1/services/apicall.dart';
+import 'package:flutter_application_1/screens/article_details_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp( const MaterialApp(
-    home: Home(),
-  ));
+  runApp(const ProviderScope(child: MaterialApp(
+    home: Homepg()
+  )));
 }
 
 
