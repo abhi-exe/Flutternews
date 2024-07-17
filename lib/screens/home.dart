@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/services/apicall.dart';
 import 'package:flutter_application_1/screens/article_details_screen.dart';
 import 'package:flutter_application_1/models/article.dart';
 
