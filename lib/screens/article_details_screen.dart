@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/apicall.dart';
+import 'package:flutter_application_1/models/article.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ArticleDetailsScreen extends StatelessWidget{
